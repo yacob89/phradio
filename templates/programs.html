@@ -97,60 +97,14 @@
           >
             <option value="0">Select a Life-study...</option>
             <optgroup label="Old Testament">
-              <option value="genesis">Genesis (134)</option>
-              <option value="exodus">Exodus (175)</option>
-              <option value="leviticus">Leviticus (40)</option>
-              <option value="numbers">Numbers (32)</option>
-              <option value="deuteronomy">Deuteronomy (25)</option>
-              <option value="joshua-judges-ruth">
-                Joshua, Judges &amp; Ruth (27)
-              </option>
-              <option value="samuel">1 &amp; 2 Samuel (29)</option>
-              <option value="kings">1 &amp; 2 Kings (20)</option>
-              <option value="chronicles">1 &amp; 2 Chronicles (10)</option>
-              <option value="ezra-nehemiah-esther">
-                Ezra, Nehemiah &amp; Esther (11)
-              </option>
-              <option value="job">Job (15)</option>
-              <option value="psalms">Psalms (42)</option>
-              <option value="proverbs-ecclesiastes-songofsongs">
-                Proverbs, Ecclesiastes &amp; Song of Songs (20)
-              </option>
-              <option value="isaiah">Isaiah (47)</option>
-              <option value="jeremiah-lamentations">
-                Jeremiah &amp; Lamentations (30)
-              </option>
-              <option value="ezekiel">Ezekiel (25)</option>
-              <option value="daniel">Daniel (17)</option>
-              <option value="minor-prophets">Minor Prophets (26)</option>
-              <option value="zechariah">Zechariah (15)</option>
+              {% for option in old_testaments %}
+              <option value="{{ option.key }}">{{ option.value }}</option>
+              {% endfor %}
             </optgroup>
             <optgroup label="New Testament">
-              <option value="matthew">Matthew (75)</option>
-              <option value="mark">Mark (59)</option>
-              <option value="luke">Luke (65)</option>
-              <option value="john">John (52)</option>
-              <option value="acts">Acts (72)</option>
-              <option value="romans">Romans (70)</option>
-              <option value="1corinthians">1 Corinthians (55)</option>
-              <option value="2corinthians">2 Corinthians (55)</option>
-              <option value="galatians">Galatians (45)</option>
-              <option value="ephesians">Ephesians (75)</option>
-              <option value="philippians">Philippians (59)</option>
-              <option value="colossians">Colossians (48)</option>
-              <option value="thessalonians">
-                1 &amp; 2 Thessalonians (29)
-              </option>
-              <option value="timothy-titus-philemon">
-                1 &amp; 2 Timothy, Titus &amp; Philemon (30)
-              </option>
-              <option value="hebrews">Hebrews (69)</option>
-              <option value="james">James (11)</option>
-              <option value="peter-jude">
-                1 &amp; 2 Peter &amp; Jude (45)
-              </option>
-              <option value="123john">1, 2 &amp; 3 John (40)</option>
-              <option value="revelation">Revelation (68)</option>
+              {% for option in new_testaments %}
+              <option value="{{ option.key }}">{{ option.value }}</option>
+              {% endfor %}
             </optgroup>
           </select>
         </form>
